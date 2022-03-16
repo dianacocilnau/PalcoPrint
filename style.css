@@ -1,0 +1,450 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Amethysta';
+}
+body {
+    font-family: 'Amethysta';font-size: 15px;
+}
+.logo img{
+    border-radius: 90%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align:right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type:none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 30px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 70px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color:#8a8a8a;
+}
+.col-2{
+    flex-basis: 35%;
+    min-width: 300px;
+    color:rgb(75, 75, 192);
+}
+.col-2 img{
+    max-width: 90%;
+    padding:50px 0;
+}
+.header{
+    background: radial-gradient(#fff,#c7d0e9);
+
+}
+.header .row{
+    margin-top: 60px;
+}
+.categories{
+    margin: 70px 0; 
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+.small-container{
+    max-width: 1080px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    text-align: left;
+    margin: 0 auto 80px;
+    position:relative;
+    line-height: 60px;
+    color:cornflowerblue;
+}
+.title::after{
+    content: '';
+    background: rgb(128, 127, 216);
+    width: 90px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    transform: translateX(-50%);
+}
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+.col-4:hover{
+    transform:translateY(-7px);
+}    
+/*------footer------*/
+.footer{
+    background: rgb(255, 255, 255);
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 0px 0 0px;
+}
+.footer p{
+    color:#8a8a8a;
+}
+.footer h3{
+    color:rgb(134, 133, 179);
+    margin-bottom:20px ;
+}
+ .footer-col-1, .footer-col-2, .footer-col-3{
+    min-width: 250px;
+    margin-bottom: 20px;
+ }
+ 
+.footer-col-1{
+    flex: 1;
+    text-align: left;
+}
+.footer-col-1 img{
+    width: 100px;
+    margin-bottom: 20px;
+}
+.footer-col-2, .footer-col-3{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+
+
+
+
+.menu-icon{
+    width:28px;
+    margin-left: 20px;
+    background: inherit;
+    display: none;
+}
+/*------media query for menu -------*/
+@media only screen and (max-width: 800px){
+    nav ul{
+        position:absolute;
+        top:100px;
+        left:0;
+        background:transparent;
+        width:100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top:10px;
+        margin-bottom: 10 px;
+        text-align: right;
+    }
+    nav ul li a{
+        color:rgb(80, 91, 121);
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+
+    }
+}
+/*-------media query for small device screen------*/
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 32px;
+    }
+        
+}
+    
+/*-------single product details------*/
+.single-product{
+    margin-top: 80px;
+ }
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+
+
+/*modal image*/
+
+#ProductImg {
+    border-radius: 0px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #ProductImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+ /* Contact us form */
+ .contact{
+    position:relative; 
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .content{
+    max-width: 900px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size:40px ;
+    font-weight: 500;
+    color:rgb(0, 0, 0);
+}
+.container2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container2 .ContactInfo{
+    width: 50%;
+    display: flex ;
+    flex-direction: column;
+}
+.container2 .ContactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container2 .ContactInfo .box .icon{
+    min-width: 50px;
+    height: 50px;
+    background: #679ce0;
+    display:flex;
+    justify-self:center;
+    align-items:center;
+    border-radius: 50%;
+    font-size: 25px;
+    padding-left:15px ;
+}
+.container2 .ContactInfo .box .text{
+    display:flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color:darkblue;
+    flex-direction: column;
+    font-weight: 400;
+}    
+.ContactForm{
+    width: 40%; 
+    padding:40px;
+    background: rgb(255, 255, 255);
+ 
+}
+.ContactForm h2{
+    font-size: 30px;
+    color:darkblue;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.ContactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.ContactForm .inputBox input ,
+.ContactForm .inputBox textarea{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin:5px 0;
+    border:none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+}
+.ContactForm .inputBox span{
+   position:absolute;
+   Left:0;
+   padding: 5px 0;
+   font-size: 16px;
+   margin:10 px 0;
+   pointer-events: none;
+   transition: 0.5s; 
+   color:#666
+}
+.ContactForm .inputBox input:focus~ span,
+.ContactForm .inputBox input:valid~ span,
+.ContactForm .inputBox textarea:focus~ span,
+.ContactForm .inputBox textarea:valid~ span
+{
+    color:#e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.ContactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #679ce0;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 18px;
+}
+@media(max-width:991px){
+
+    .contact{
+        padding: 50px;
+    }
+    .container2{
+        flex-direction:column;
+    }
+    .container2 .ContactInfo{
+        margin-bottom: 40px;
+    }
+    .container2 .ContactInfo,
+    .ContactForm{
+        width: 100%;
+    }
+
+}    
