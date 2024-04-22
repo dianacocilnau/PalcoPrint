@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cana Personalizata - Palco Print</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="header">
+        <!------butoanele de nav-->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Acasa</a></li>
+                        <li><a href="produse.html">Produse</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <img src="images/whitemenu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+
+        </div>   
+    </div>
+
+
+    </div>   
+</div>
+
+<!-------Produsul------>
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="images/cana.JPG" width="1000px" id="ProductImg">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>    
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/cana.JPG" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                       <img src="images/cana2.JPG" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                       <img src="images/cana3.jpeg" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/cani.png" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                       <img src="images/cani colorate.jpg" width="100%" class="small-img">
+                </div>
+                
+                </div>
+        </div>
+        <div class="col-2">
+            <p>Produse / Cani</p>
+            <h1>Cana cu imprimeu personalizat</h1>
+            <h4>Pret</h4>
+            <ul>
+                <li>Cana Albe - 30 RON buc.</li>
+                <li>Cana Colorate - 35 RON buc.</li>
+                <li>Cana Termosensibile - 45 RON buc.</li>
+            </ul>
+            <br><br>
+            <h3>Detalii produs</h3>
+            <br><br>
+            <p>
+                Fie că vrei să le faci cadou, fie că le faci pentru tine, sau echipa ta, canile personalizate sunt întotdeauna o idee excelentă, iar noi suntem aici să te ajutăm.<br><br>
+                In pret este inclusa si cana. <br><br>
+                Pentru alte informații, sau pentru a plasa o comandă personalizată, te rugăm să ne contactezi. <br><br>
+
+            </p>
+
+        </div>
+    </div>
+</div>
+<hr style="height:7px;border-width:0;color:rgb(134, 133, 179);background-color:rgb(134, 133, 179)">
+<!-------footer------>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            
+            <div class="footer-col-1">
+                <img src="images/logo.png">
+                </div>
+            <div class="footer-col-2">
+                <h3>Link util</h3>
+                <ul>
+                    <li><a href="contact.html"></li>Contacteaza-ne</li></a>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Urmareste-ne</h3>
+                <ul>
+                    <li><a href=""></li>Instagram</li></a>
+                    <li><a href="https://www.facebook.com/profile.php?id=100072252573002"></li>Facebook</li></a>
+                </ul>
+            </div>
+                
+        </div>
+    </div>
+</div>
+<!------js for toggle menu------>
+<script>
+    var MenuItems=document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px")
+            {
+                 MenuItems.style.maxHeight="200px";
+            }
+        else
+            {
+                MenuItems.style.maxHeight="0px";
+            }
+    }
+</script>
+
+<!------js for galerry------>
+<script>
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+    SmallImg[0].onclick = function()
+     {
+       ProductImg.src = SmallImg[0].src;
+     }
+     SmallImg[1].onclick = function()
+     {
+       ProductImg.src = SmallImg[1].src;
+     }
+     SmallImg[2].onclick = function()
+     {
+       ProductImg.src = SmallImg[2].src;
+     }
+     SmallImg[3].onclick = function()
+     {
+       ProductImg.src = SmallImg[3].src;
+     }
+     SmallImg[4].onclick = function()
+     {
+       ProductImg.src = SmallImg[4].src;
+     }
+    
+</script>
+<!------js for modal img------>
+<script>
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("ProductImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+</script>
+    
+</body>
+
+</html>
