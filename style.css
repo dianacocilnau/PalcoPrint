@@ -57,6 +57,11 @@ p{
     max-width: 90%;
     padding:50px 0;
 }
+.col-21{
+    flex-basis: 35%;
+    min-width: 600px;
+    color:rgb(75, 75, 192);
+}
 .header{
     background: radial-gradient(#fff,#c7d0e9);
 
